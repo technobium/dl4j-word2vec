@@ -28,13 +28,13 @@ public class Word2VecDemo {
         Word2Vec word2VecModel = WordVectorSerializer.readWord2VecModel(new File(word2VecDemo.modelFilePath));
 
         Collection<String> list = word2VecModel.wordsNearest("boy" , 10);
-        System.out.println(list);
+        System.out.println(" boy: "+ list);
 
         list = word2VecModel.wordsNearest("girl" , 10);
-        System.out.println(list);
+        System.out.println("girl: " + list);
 
         Collection<String> stringList = word2VecModel.wordsNearest("day", 10);
-        System.out.println(stringList);
+        System.out.println(" day: " + stringList);
     }
 
     public  void train() throws IOException {
